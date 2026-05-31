@@ -148,6 +148,9 @@ nav:
         - Core concepts: python/data-structures/advanced-graph-algorithms/core-concepts.md
         - Interview problems: python/data-structures/advanced-graph-algorithms/interview-problems.md
         - Interview questions: python/data-structures/advanced-graph-algorithms/interview-questions.md
+    - Programs:
+      - Python programs: python/programs/python_all_program.md
+      - Reverse string keeping spaces: python/programs/two_pointer_space_retain.md
     - Object-Oriented Programming:
       - OOP:
         - Core concepts: python/oop/core-concepts.md
