@@ -1,0 +1,390 @@
+---
+description: Python concepts, interview problems, shopping examples, and MkDocs nav under docs/python/
+globs: docs/python/**/*.md,mkdocs.yml
+alwaysApply: false
+---
+
+# Python concepts & interview study
+
+Use this rule when the user asks to learn, document, or practice Python concepts, data structures, tricky language questions, or common interview / LeetCode-style problems.
+
+## Preferred example domain
+
+When the user does not provide a domain, prefer examples from an **online computer shopping management system**:
+
+- hardware: laptop, mouse, keyboard, monitor, printer, storage
+- software: PDF editor, office suite, antivirus, IDE, operating system
+- subscriptions: monthly / yearly plan, support plan, cloud storage, license seats
+- shopping flows: catalog, cart, wishlist, inventory, warehouse, order, discount, refund
+
+Use this domain to make Python examples practical (e.g. product IDs, category tags, cart validation, duplicate imports, subscription feature checks).
+
+## Folder layout (`docs/python/`)
+
+Create or extend **categories** from the user’s prompt. Prefer topic folders over one giant file.
+
+| Category | Folder | Examples |
+|----------|--------|----------|
+| Core datatypes | `strings/`, `string-formatting/`, `list/`, `dict/`, `set/`, `tuple/` | `core-concepts.md`, `methods.md`, reference pages, `frequently-asked-questions.md` |
+| Other built-ins | `numbers/`, `bool/`, `none-type/`, `binary/`, `range/` | numeric types, booleans, `None`, bytes, ranges |
+| Python language | `functions/`, `advanced-functions/`, `advanced-python/`, `oop/`, `classes-and-objects/`, `dunder-methods/`, `class-properties-self/`, `inheritance/`, `encapsulation/`, `abstraction/`, `polymorphism/`, `class-relationships/`, `advanced-oop/`, `python-specific-oop/`, `design-principles/`, `design-patterns/`, `operators/`, `control-flow/`, `user-input/`, `exception-handling/`, `errors/` | parameters, advanced functions, generators, decorators, context managers, advanced Python internals, GIL, memory management, garbage collection, OOP, classes, objects, dunder methods, properties, `self`, inheritance, encapsulation, abstraction, polymorphism, class relationships, advanced OOP, Python-specific OOP, design principles, design patterns, operators, loops, `match`, conditions, input, exceptions, error types |
+| Standard library topics | `dates/`, `maths/`, `json/`, `regex/`, `file-handling/`, `concurrency/` | `datetime`, `timedelta`, `math`, `statistics`, `random`, `json`, `re`, files, CSV, Pickle, threading, multiprocessing, asyncio |
+| Web/API design | `rest-api-design/` | REST resources, HTTP methods, status codes, JSON bodies, validation, pagination, auth, versioning |
+| Database | `database-mysql/` | MySQL connection, CRUD, parameterized queries, transactions, commits, rollbacks |
+| Tooling and environment | `pip/`, `virtual-environment/` | package installation, dependencies, `requirements.txt`, `venv`, activation |
+| Interview Q&A / FAQ | root, datatype folder, or `interview/` | conceptual answers, tricky Python, `frequently-asked-questions.md` |
+| Programs / problems | `programs/` | reverse string, palindrome, second max |
+| LeetCode-style | `leetcode/` or `programs/` | two sum, valid parentheses, merge lists |
+| Data structures | `data-structures/` | recursion, dynamic programming, searching algorithms, sorting algorithms, stacks, queues, linked lists, hash table, binary trees, BSTs, AVL trees, heap, priority queue, graphs, advanced graph algorithms |
+
+**Filenames:** lowercase with hyphens (e.g. `second-max.md`, `string-reverse.md`).
+
+## Page templates
+
+### Concept page
+
+- One `#` title; sections: **Overview** → **Syntax / API** → **Examples** → **Gotchas** → **See also** (relative links).
+- Every code block uses ` ```python ` and should be runnable or clearly scoped.
+- Prefer examples from the online computer shopping domain unless the user asks for a different domain.
+
+### Data type page
+
+For Python data types and built-in topics such as `str`, `list`, `set`, `tuple`, `dict`, `int`, `float`, `complex`, `bool`, `NoneType`, `bytes`, `bytearray`, `memoryview`, and `range`, include:
+
+1. **Overview** — what the type is and when to use it.
+2. **Creating values** — literal syntax and constructor syntax.
+3. **Common operations** — add, remove, update, lookup, iteration, conversion.
+4. **Shopping examples** — products, cart, wishlist, categories, inventory, subscriptions.
+5. **Interview questions** — short answer + minimal code.
+6. **Practice problems** — small tasks the user can solve.
+
+For **set** pages specifically, cover uniqueness, membership checks, `add`, `remove`, `discard`, union, intersection, difference, symmetric difference, subset / superset, and `frozenset`.
+
+### Four-page topic pattern
+
+For each substantial Python topic, prefer this sidebar shape:
+
+1. **Core concepts** — overview, syntax, practical examples, gotchas.
+2. **Reference / methods / operations** — tables plus method/operator/function examples.
+3. **Interview problems** — 8–12 common problems with solutions and complexity.
+4. **Frequently asked questions** — large grouped Q&A page, usually 30–60 questions depending on the topic/request.
+
+For DSA/data-structure topics, use this three-page structure unless the user explicitly asks for something else:
+
+1. `core-concepts.md`
+2. `interview-problems.md` with at least 20 problems, basic explanation, Python solution, and output
+3. `interview-questions.md` with exactly 10 interview questions
+
+Do not create a reference page for DSA topics unless the user explicitly asks for it. Avoid duplicate problems already covered elsewhere in the Python notes.
+
+Use topic-specific names when clearer:
+
+- `methods.md` for strings/lists/dicts/sets/tuples.
+- `string-formatting-reference.md` for f-strings, `str.format()`, `%` formatting, alignment, precision, and display formatting.
+- `advanced-functions-reference.md` for generators, `yield`, generator expressions, function decorators, decorator arguments, class decorators, decorator chaining, context managers, `with`, `__enter__()`, and `__exit__()`.
+- `advanced-python-reference.md` for the GIL, CPU-bound vs I/O-bound work, CPython memory management, reference counting, cyclic garbage collection, memory leaks, `gc`, `sys.getsizeof()`, and memory-friendly patterns.
+- `oop-reference.md` for classes, objects, attributes, methods, `self`, `__init__`, encapsulation, inheritance, polymorphism, abstraction, and composition.
+- `classes-and-objects-reference.md` for class syntax, object creation, instance attributes, class attributes, instance methods, `__str__`, `__repr__`, and mutable class attribute pitfalls.
+- `dunder-methods-reference.md` for `__init__`, `__new__`, `__str__`, `__repr__`, `__len__`, `__bool__`, comparison methods, container methods, operator overloading, and context manager methods.
+- `class-properties-self-reference.md` for `self`, instance properties, class properties, method binding, `@property`, setters, internal attributes, read-only properties, and shared mutable property pitfalls.
+- `inheritance-reference.md` for parent/child classes, overriding, `super()`, `isinstance()`, `issubclass()`, single/multiple inheritance, MRO, and inheritance vs composition.
+- `encapsulation-reference.md` for public/internal/private-style naming, getters, setters, `@property`, read-only properties, name mangling, validation, and protecting mutable internal state.
+- `abstraction-reference.md` for data abstraction, abstract base classes, `ABC`, `@abstractmethod`, interfaces, duck typing, service abstractions, and abstraction vs encapsulation.
+- `polymorphism-reference.md` for method overriding, duck typing, common interfaces, built-in polymorphism, operator polymorphism, dunder methods, and polymorphism vs inheritance/abstraction.
+- `class-relationships-reference.md` for association, aggregation, composition, object lifetime, ownership, has-a vs is-a, and composition vs inheritance.
+- `advanced-oop-reference.md` for MRO, diamond problem, mixins, nested classes, dynamic attributes, and object introspection with `type()`, `isinstance()`, and `issubclass()`.
+- `python-specific-oop-reference.md` for `@dataclass`, `field(default_factory=...)`, `frozen=True`, `__slots__`, properties, descriptors, and metaclasses.
+- `design-principles-reference.md` for SOLID, DRY, KISS, composition over inheritance, dependency injection, and interview design trade-offs.
+- `design-patterns-reference.md` for Singleton, Factory, Strategy, Observer, Decorator, Adapter, Command, pattern categories, use cases, and trade-offs.
+- `rest-api-design-reference.md` for REST resources, endpoint naming, HTTP methods, status codes, request/response JSON, errors, pagination, filtering, sorting, authentication, authorization, idempotency, versioning, and rate limiting.
+- `mysql-crud-reference.md` for Python MySQL connection, cursor usage, table creation, `INSERT`, `SELECT`, `UPDATE`, `DELETE`, `executemany()`, `fetchone()`, `fetchall()`, transactions, `commit()`, `rollback()`, and SQL injection prevention.
+- `operations-and-methods.md` for numbers/binary.
+- `operations-and-truthiness.md` for booleans.
+- `operations-and-patterns.md` for NoneType.
+- `operator-reference.md` for operators.
+- `control-flow-reference.md` for loops/conditions/`match`.
+- `user-input-reference.md` for `input()`, string return values, conversion, validation, retry loops, menu choices, and yes/no prompts.
+- `exception-handling-reference.md` for `try`/`except`/`else`/`finally`, `raise`, and common exception types.
+- `error-types-reference.md` for built-in error classes such as `TypeError`, `ValueError`, `KeyError`, `IndexError`, `AttributeError`, `ImportError`, and `FileNotFoundError`.
+- `date-reference.md`, `maths-reference.md`, `range-reference.md`, `json-reference.md`, `regex-reference.md`, `file-handling-reference.md`, `concurrency-reference.md`, `pip-reference.md`, `virtual-environment-reference.md` for standard library/tooling reference topics.
+
+### Data type methods page
+
+When the user asks for datatype **methods**, create a separate `methods.md` page inside the datatype folder when useful:
+
+- `docs/python/strings/methods.md`
+- `docs/python/list/methods.md`
+- `docs/python/set/methods.md`
+- `docs/python/dict/methods.md`
+- `docs/python/tuple/methods.md`
+- For non-method topics, use the relevant reference page from the four-page pattern.
+
+Use this structure:
+
+1. **Quick method table** — method, what it does, interview use case.
+2. **Method sections** — syntax, shopping example, output, interview point.
+3. **Mutation note** — clearly say whether the method changes the object or returns a new value.
+4. **Common comparisons** — e.g. `remove()` vs `discard()`, `append()` vs `extend()`, `get()` vs `[]`.
+5. **Common interview questions** — short answer + minimal code.
+6. **Practice problems** — small tasks based on the methods.
+
+For **set methods**, include:
+
+- add/update: `add()`, `update()`
+- delete/reset: `remove()`, `discard()`, `pop()`, `clear()`
+- copying: `copy()`
+- set algebra: `union()`, `intersection()`, `difference()`, `symmetric_difference()`
+- in-place variants: `intersection_update()`, `difference_update()`, `symmetric_difference_update()`
+- relationship checks: `issubset()`, `issuperset()`, `isdisjoint()`
+
+For each set method, include an interview note explaining when the method helps with duplicate detection, fast lookup, missing items, group comparison, or validation.
+
+### Topic-specific coverage
+
+When creating these topics, include at least:
+
+- **Strings**: immutability, indexing/slicing, `split`, `join`, `strip`, `replace`, `find` vs `index`, palindrome/anagram/frequency problems.
+- **String Formatting**: f-strings, `str.format()`, `%` formatting, `:.2f`, alignment with `<`/`>`/`^`, width, zero padding, comma separators, percentages, date formatting, debug f-strings, SQL/logging safety.
+- **Lists**: ordering, mutability, indexing, slicing, `append` vs `extend`, `remove` vs `pop`, sorting, two pointers, stack/queue caveats.
+- **Tuples**: immutability, packing/unpacking, single-item comma, tuple keys, fixed records, multiple returns.
+- **Dictionaries**: key-value lookup, hashable keys, `get`, `items`, `update`, `setdefault`, grouping, counting, Two Sum indices.
+- **Sets**: uniqueness, membership, set algebra, duplicate detection, missing/common values, `frozenset`.
+- **Data Structures**: recursion, base case, recursive calls, call stack, backtracking, choose/explore/undo patterns, dynamic programming, memoization, tabulation, overlapping subproblems, optimal substructure, DP state, recurrence relation, Fibonacci, Climbing Stairs, House Robber, Coin Change, Longest Increasing Subsequence, Longest Common Subsequence, Knapsack, searching algorithms, linear search, binary search, lower bound, upper bound, first and last position, search in rotated sorted array, peak element, binary search on answer, sorting algorithms, Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort, sorting stability, in-place sorting, divide-and-conquer sorting, Python `sorted()` and `.sort()`, stacks, queues, linked lists, hash tables, binary trees, BSTs, AVL trees, heaps, priority queues, graphs, advanced graph algorithms, LIFO, FIFO, `collections.deque`, linked-list node pointers, slow/fast pointers, cycle detection, stack helper patterns, queue processing patterns, Python `dict`/`set`, hashable keys, collisions, average `O(1)` lookup, grouping/mapping/caching patterns, tree nodes, DFS traversals, BFS/level-order traversal, BST ordering, BST validation, height/depth, balanced trees, AVL balance factor, AVL rotations (LL, RR, LR, RL), `heapq`, min heap, max heap with negative values, top `k`, kth smallest/largest, priority scheduling, merge sorted streams, median from stream, graph vertices/edges, adjacency list, adjacency matrix, directed/undirected graphs, weighted/unweighted graphs, BFS with queue, DFS with recursion/stack, shortest path in unweighted graphs, connected components, cycle detection, topological ordering, Dijkstra, Bellman-Ford, Floyd-Warshall, DSU/Union Find, path compression, union by rank, Kruskal, Prim, MSTs, negative-cycle detection, and DSA interview problem-solving with complexity.
+- **Numbers**: `int`, `float`, `complex`, `/` vs `//`, `%`, rounding, `Decimal`, precision, `math.isclose`.
+- **Booleans**: truthiness, `and`/`or` return operands, `any`, `all`, `is None`, boolean flags.
+- **NoneType**: `None`, `type(None)`, optional returns, `is None`, mutable default fix, sentinel object.
+- **Binary**: `bytes`, `bytearray`, `memoryview`, encoding/decoding, binary files, hex, base64, buffer protocol.
+- **Range**: `range(start, stop, step)`, stop-exclusive, negative step, batching, indexes vs `enumerate`.
+- **Functions**: parameters vs arguments, defaults, `*args`, `**kwargs`, mutable defaults, scope, closures, decorators, generators.
+- **Advanced Functions**: generators, `yield`, lazy evaluation, generator expressions, `next()`, `StopIteration`, function decorators, decorators with arguments, `functools.wraps`, class decorators, decorator chaining and order, context managers, `with` statement, `__enter__()`, `__exit__()`, exception suppression, and `try/finally` style cleanup.
+- **Advanced Python**: GIL, CPython interpreter behavior, CPU-bound vs I/O-bound tasks, threading limits, multiprocessing trade-offs, memory management, private heap, object references, reference counting, `del`, circular references, cyclic garbage collection, generational GC, `gc` module, `sys.getsizeof()`, shallow vs deep size, memory leaks, unbounded caches, weak references, generators for memory efficiency, and context managers for resource cleanup.
+- **OOP**: classes, objects, attributes, methods, `self`, `__init__`, encapsulation, inheritance, polymorphism, abstraction, composition, method overriding, class vs instance attributes, `@property`, `super`, MRO, duck typing.
+- **Classes and Objects**: `class` syntax, creating objects, instance attributes, class attributes, methods, `self`, `__init__`, object state, object behavior, dynamic attributes, `__str__`, `__repr__`, shared mutable class attribute pitfalls.
+- **Dunder Methods**: `__init__`, `__new__`, `__str__`, `__repr__`, `__len__`, `__bool__`, `__eq__`, `__lt__`, `__hash__`, `__getitem__`, `__setitem__`, `__iter__`, `__next__`, `__contains__`, `__add__`, `__enter__`, `__exit__`, operator overloading, context managers.
+- **Class Properties and self**: `self` parameter, instance properties, class properties, method binding, `@property`, property setters, read-only properties, internal attributes such as `_price`, attribute shadowing, shared mutable class property pitfalls.
+- **Inheritance**: parent class, child class, base class, subclass, single inheritance, multiple inheritance, multilevel inheritance, method overriding, `super()`, `isinstance()`, `issubclass()`, MRO, diamond problem, inheritance vs composition.
+- **Encapsulation**: public attributes, `_internal` attributes, `__private_style` name mangling, getters, setters, `@property`, read-only properties, validation, invariants, controlled mutation, returning copies for mutable state, encapsulation vs abstraction.
+- **Data Abstraction**: hiding implementation details, simple public interfaces, abstract base classes, `ABC`, `@abstractmethod`, concrete implementations, duck typing, service abstractions, strategy pattern, abstraction vs encapsulation, abstraction vs inheritance.
+- **Polymorphism**: same interface with different behavior, method overriding, duck typing, common methods such as `pay()`/`send()`/`apply()`, built-in polymorphism with `len()`, operator polymorphism with `+`, dunder methods such as `__len__` and `__add__`, strategy pattern, polymorphism vs inheritance, polymorphism vs abstraction.
+- **Class Relationships**: association, aggregation, composition, dependency, has-a, is-a, uses-a, owns-a, object lifetime, weak ownership, strong ownership, composition vs inheritance, aggregation vs composition, examples with `Customer`, `Order`, `Cart`, `Product`, `Payment`, and `OrderLine`.
+- **Advanced OOP**: Method Resolution Order (MRO), diamond problem, cooperative multiple inheritance, `super()` with MRO, mixins, nested classes, dynamic attributes, object introspection, `type()`, `isinstance()`, `issubclass()`, `dir()`, `getattr()`, `setattr()`, `hasattr()`, `__dict__`.
+- **Python-Specific OOP**: `@dataclass`, `field(default_factory=list)`, `frozen=True`, `slots=True`, `__slots__`, properties, property setters, descriptors, descriptor protocol methods (`__get__`, `__set__`, `__delete__`, `__set_name__`), metaclasses, `type`, class creation hooks, when to avoid metaclasses.
+- **Design Principles**: SOLID principles (SRP, OCP, LSP, ISP, DIP), DRY, KISS, composition over inheritance, dependency injection, small interfaces, abstractions, testability, coupling, cohesion, and interview trade-offs.
+- **Design Patterns**: Singleton for database connections, Factory for product creation, Strategy for payment methods, Observer for order status notifications, Decorator for logging/security, Adapter for third-party shipping APIs, Command for cancel/undo order, pattern categories, Pythonic alternatives, and over-engineering trade-offs.
+- **Operators**: arithmetic, assignment, comparison, logical, identity, membership, bitwise, precedence.
+- **Control Flow**: `if`/`elif`/`else`, `for`, `while`, `break`, `continue`, `pass`, loop `else`, `match`.
+- **User Input**: `input()`, prompt text, string return value, `.strip()`, `.lower()`, `.upper()`, `int()`/`float()` conversion, `ValueError`, retry loops, choice validation, optional input, comma-separated values, yes/no confirmation.
+- **Exception Handling**: `try`, `except`, `else`, `finally`, `raise`, specific exceptions, multiple `except` blocks, custom exceptions, cleanup, re-raise, exception chaining.
+- **Error Types**: `TypeError`, `ValueError`, `NameError`, `UnboundLocalError`, `KeyError`, `IndexError`, `AttributeError`, `ImportError`, `ModuleNotFoundError`, `FileNotFoundError`, `PermissionError`, `ZeroDivisionError`, `RecursionError`, `StopIteration`, `AssertionError`, `SyntaxError`, `IndentationError`, `TabError`.
+- **Dates**: `datetime`, `date`, `timedelta`, `strftime`, `strptime`, ISO format, timezone-aware UTC.
+- **Maths**: `sum`, `min`, `max`, `round`, `math`, `statistics`, `random`, `Decimal`, `Fraction`, prime/GCD/LCM problems.
+- **JSON**: `json.dumps`, `json.loads`, `json.dump`, `json.load`, JSON/Python type mapping, `JSONDecodeError`, pretty printing, API payloads, serialization limits.
+- **RegEx**: `re.search`, `re.match`, `re.fullmatch`, `re.findall`, `re.finditer`, `re.sub`, `re.compile`, groups, named groups, flags, raw strings, validation vs extraction.
+- **File Handling**: `open()`, `with open(...)`, file modes (`r`, `w`, `a`, `x`, `rb`, `wb`), `read()`, `readline()`, `readlines()`, `write()`, `writelines()`, encodings, CSV with `csv.reader`/`csv.DictReader`/`csv.DictWriter`, JSON files with `json.load`/`json.dump`, Pickle with `pickle.load`/`pickle.dump`, file exceptions, and Pickle security warnings.
+- **Concurrency**: concurrency vs parallelism, I/O-bound vs CPU-bound work, `threading.Thread`, `ThreadPoolExecutor`, `multiprocessing.Process`, `ProcessPoolExecutor`, `asyncio`, `async def`, `await`, `asyncio.gather`, `asyncio.run`, race conditions, critical sections, locks, queues, deadlocks, the GIL, and choosing threading vs multiprocessing vs asyncio.
+- **REST API Design**: REST resources, plural noun endpoint naming, HTTP methods (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`), status codes (`200`, `201`, `204`, `400`, `401`, `403`, `404`, `409`, `422`, `429`, `500`), JSON request/response bodies, consistent error shapes, path vs query parameters, filtering, sorting, pagination, idempotency keys, authentication, authorization, versioning, rate limiting, and interview endpoint design.
+- **Python MySQL CRUD**: `mysql-connector-python`, database connections, cursors, dictionary cursors, creating tables, CRUD operations with `INSERT`/`SELECT`/`UPDATE`/`DELETE`, `executemany()`, `fetchone()`, `fetchall()`, `rowcount`, parameterized queries with `%s`, SQL injection prevention, transactions, `commit()`, `rollback()`, duplicate key handling, soft delete, indexes, connection pooling, and credential safety.
+- **pip**: `python -m pip`, install/uninstall/upgrade, `pip list`, `pip show`, `pip freeze`, `requirements.txt`, version pins, dependency conflicts.
+- **Virtual environments**: `python -m venv`, activation on macOS/Linux/Windows, `deactivate`, per-project isolation, `.venv/`, `.gitignore`, installing dependencies inside venv.
+
+### Large interview FAQ page
+
+When the user asks for a **huge list**, **frequently asked questions**, or **minimum N questions**, create `frequently-asked-questions.md` inside the relevant datatype/topic folder.
+
+Use this structure:
+
+1. **Intro** — what the page covers and the interview focus.
+2. **Basic level** — syntax, behavior, simple operations.
+3. **Intermediate level** — method differences, common operations, small problem patterns.
+4. **Advanced level** — LeetCode-style patterns, complexity, edge cases.
+5. **Pro level** — internals, hashing, memory/performance, custom objects, trade-offs.
+6. **Final interview checklist** — short bullets to revise quickly.
+7. **See also** — links to core concepts, methods, and interview problems.
+
+If the user gives a minimum count (e.g. 50 questions), meet or exceed it. Number questions sequentially and keep each answer concise:
+
+- **Question heading**
+- 1–3 sentence answer
+- small `python` example when useful
+- interview warning or comparison when applicable
+
+For **set FAQ** pages, cover at least:
+
+- uniqueness, ordering, empty set creation, indexing limits
+- `add()` vs `update()`, `remove()` vs `discard()`
+- union, intersection, difference, symmetric difference
+- subset, superset, disjoint checks
+- duplicate detection, Two Sum, missing values, longest consecutive sequence
+- `frozenset`, hashability, collisions, average vs worst-case complexity
+- when to choose `set` vs `list` vs `dict` vs `Counter`
+- custom objects with `__eq__` / `__hash__`
+
+### Interview / problem page
+
+For each problem (string reverse, palindrome, find second max, etc.):
+
+1. **Problem** — one-line statement + sample input/output.
+2. **Approach** — brief logic (iterative, two-pointer, sorting, hash map, etc.).
+3. **Solution** — complete Python with comments only where non-obvious.
+4. **Complexity** — time and space.
+5. **Variants** — follow-ups (case sensitivity, empty input, duplicates, LeetCode # if known).
+
+Multiple solutions are welcome when they teach (e.g. brute force vs optimal).
+
+### Interview practice problem format
+
+For problem-solving notes, prefer this fuller format when the user asks for interview preparation:
+
+1. **Problem** — clear statement.
+2. **Example** — input, output, and short explanation.
+3. **Constraints / edge cases** — empty input, duplicates, negative values, case sensitivity, ordering.
+4. **Brute force idea** — short explanation and why it is less efficient.
+5. **Optimized approach** — data structure choice and why it improves complexity.
+6. **Dry run** — small table or step-by-step walkthrough.
+7. **Python solution** — runnable code.
+8. **Complexity** — time and space.
+9. **Interview follow-ups** — variants and trade-offs.
+
+When a set is the optimized data structure, explicitly say:
+
+- what is stored in the set (`seen`, required items, available products, etc.)
+- why lookup is efficient (average `O(1)`)
+- what would change if order, counts, or indices matter
+
+### Tricky Python topics
+
+Cover with **question → short answer → minimal repro**:
+
+- Mutable default arguments, `is` vs `==`, shallow vs deep copy
+- List/dict comprehensions, generators, `*args` / `**kwargs`
+- Scope, closures, late binding in loops
+- `@property`, decorators, context managers (when relevant)
+
+## MkDocs navigation
+
+After adding or moving pages:
+
+1. Open `mkdocs.yml` and extend the **Python:** section (match existing two-space indent).
+2. Group Python pages by study context before adding the topic itself:
+   - **Core Language**: input, operators, control flow, functions, advanced functions, iterators, modules, exceptions, errors.
+   - **Built-in Types**: strings, lists, tuples, dictionaries, sets, numbers, range, booleans, `NoneType`, binary types.
+   - **Data Structures**: stacks, queues, linked lists, and future DSA structures.
+   - **Object-Oriented Programming**: OOP basics, classes/objects, dunder methods, `self`, inheritance, encapsulation, abstraction, polymorphism, relationships, advanced/Python-specific OOP, design principles, design patterns.
+   - **Advanced Python**: internals, GIL, memory management, garbage collection, concurrency.
+   - **Standard Library**: dates, maths, JSON, RegEx, file handling.
+   - **Web and API**: REST API design and related backend/API topics.
+   - **Database**: MySQL/PostgreSQL/SQLite topics, CRUD operations, transactions, SQL safety.
+   - **Tooling and Environment**: pip, virtual environments, packaging/tooling topics.
+3. Keep menu labels readable and beginner-friendly: `Built-in Types`, `Core Language`, `Object-Oriented Programming`, `Advanced Python`, etc.
+4. Prefer topic menus when a folder has multiple pages (`Strings`, `Sets`, `REST API Design`, `Concurrency`).
+5. Add the four standard pages under each topic when created, nested below the correct parent group.
+
+Example:
+
+```yaml
+  - Python:
+    - Core Language:
+      - Operators:
+        - Core concepts: python/operators/core-concepts.md
+        - Operator reference: python/operators/operator-reference.md
+      - Control Flow:
+        - Core concepts: python/control-flow/core-concepts.md
+        - Control-flow reference: python/control-flow/control-flow-reference.md
+    - Built-in Types:
+      - Strings:
+        - Core concepts: python/strings/core-concepts.md
+        - Practice tasks: python/strings/practice-tasks.md
+      - Sets:
+        - Core concepts: python/set/core-concepts.md
+        - Methods: python/set/methods.md
+    - Data Structures:
+      - Recursion:
+        - Core concepts: python/data-structures/recursion/core-concepts.md
+        - Interview problems: python/data-structures/recursion/interview-problems.md
+        - Interview questions: python/data-structures/recursion/interview-questions.md
+      - Dynamic Programming:
+        - Core concepts: python/data-structures/dynamic-programming/core-concepts.md
+        - Interview problems: python/data-structures/dynamic-programming/interview-problems.md
+        - Interview questions: python/data-structures/dynamic-programming/interview-questions.md
+      - Searching Algorithms:
+        - Core concepts: python/data-structures/searching-algorithms/core-concepts.md
+        - Interview problems: python/data-structures/searching-algorithms/interview-problems.md
+        - Interview questions: python/data-structures/searching-algorithms/interview-questions.md
+      - Sorting Algorithms:
+        - Core concepts: python/data-structures/sorting-algorithms/core-concepts.md
+        - Interview problems: python/data-structures/sorting-algorithms/interview-problems.md
+        - Interview questions: python/data-structures/sorting-algorithms/interview-questions.md
+      - Stacks, Queues, and Linked Lists:
+        - Core concepts: python/data-structures/stacks-queues-linked-lists/core-concepts.md
+        - Interview problems: python/data-structures/stacks-queues-linked-lists/interview-problems.md
+        - Interview questions: python/data-structures/stacks-queues-linked-lists/interview-questions.md
+      - Hash Table:
+        - Core concepts: python/data-structures/hash-table/core-concepts.md
+        - Interview problems: python/data-structures/hash-table/interview-problems.md
+        - Interview questions: python/data-structures/hash-table/interview-questions.md
+      - Trees:
+        - Core concepts: python/data-structures/trees/core-concepts.md
+        - Interview problems: python/data-structures/trees/interview-problems.md
+        - Interview questions: python/data-structures/trees/interview-questions.md
+      - Heap and Priority Queue:
+        - Core concepts: python/data-structures/heap-priority-queue/core-concepts.md
+        - Interview problems: python/data-structures/heap-priority-queue/interview-problems.md
+        - Interview questions: python/data-structures/heap-priority-queue/interview-questions.md
+      - Graphs:
+        - Core concepts: python/data-structures/graphs/core-concepts.md
+        - Interview problems: python/data-structures/graphs/interview-problems.md
+        - Interview questions: python/data-structures/graphs/interview-questions.md
+      - Advanced Graph Algorithms:
+        - Core concepts: python/data-structures/advanced-graph-algorithms/core-concepts.md
+        - Interview problems: python/data-structures/advanced-graph-algorithms/interview-problems.md
+        - Interview questions: python/data-structures/advanced-graph-algorithms/interview-questions.md
+    - Object-Oriented Programming:
+      - OOP:
+        - Core concepts: python/oop/core-concepts.md
+        - OOP reference: python/oop/oop-reference.md
+    - Standard Library:
+      - JSON:
+        - Core concepts: python/json/core-concepts.md
+        - JSON reference: python/json/json-reference.md
+    - Database:
+      - MySQL CRUD:
+        - Core concepts: python/database-mysql/core-concepts.md
+        - MySQL CRUD reference: python/database-mysql/mysql-crud-reference.md
+    - Tooling and Environment:
+      - pip:
+        - Core concepts: python/pip/core-concepts.md
+        - pip reference: python/pip/pip-reference.md
+```
+
+Every new sidebar page **must** have a `nav` entry unless the user explicitly wants a link-only orphan page.
+
+## Workflow (always run)
+
+From the directory containing `mkdocs.yml` (`javascript/`):
+
+```bash
+mkdocs build --strict
+```
+
+Fix broken internal links and missing nav targets before finishing. Use `mkdocs serve` when the user wants a live preview.
+
+When a new Python topic is added or the user asks to always update this rule, update this rule near the end of the docs work so the topic list, reference filename guidance, and coverage checklist stay current.
+
+## Cross-links
+
+- Link concept pages to related programs (e.g. strings core concepts → string reverse program).
+- Prefer relative paths: `[Palindrome](palindrome.md)` from the same folder, or `../strings/core-concepts.md` from a sibling category.
+- Do not duplicate full explanations; link to the concept page instead.
+
+## Default problem set (when user does not specify)
+
+Prioritize classic interview asks:
+
+- Reverse a string (with and without `[::-1]`)
+- Palindrome check (string and number)
+- Find second largest in a list
+- Remove duplicates, count frequency, anagram check
+- Two sum, valid parentheses, merge two sorted lists (LeetCode-style)
+- FizzBuzz, Fibonacci, factorial (warm-ups)
+
+Ask before inventing a new top-level category name if an existing folder already fits.

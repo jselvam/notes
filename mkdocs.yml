@@ -1,0 +1,277 @@
+site_name: Selvam's Notes
+
+nav:
+  - Home: index.md
+  - Python:
+    - Core Language:
+      - User Input:
+        - Core concepts: python/user-input/core-concepts.md
+        - User input reference: python/user-input/user-input-reference.md
+        - Interview problems: python/user-input/interview-problems.md
+        - Frequently asked questions: python/user-input/frequently-asked-questions.md
+      - Operators:
+        - Core concepts: python/operators/core-concepts.md
+        - Operator reference: python/operators/operator-reference.md
+        - Interview problems: python/operators/interview-problems.md
+        - Frequently asked questions: python/operators/frequently-asked-questions.md
+      - Control Flow:
+        - Core concepts: python/control-flow/core-concepts.md
+        - Control-flow reference: python/control-flow/control-flow-reference.md
+        - Interview problems: python/control-flow/interview-problems.md
+        - Frequently asked questions: python/control-flow/frequently-asked-questions.md
+      - Functions:
+        - Core concepts: python/functions/core-concepts.md
+        - Parameters and arguments: python/functions/parameters-and-arguments.md
+        - Interview problems: python/functions/interview-problems.md
+        - Frequently asked questions: python/functions/frequently-asked-questions.md
+      - Advanced Functions:
+        - Core concepts: python/advanced-functions/core-concepts.md
+        - Advanced functions reference: python/advanced-functions/advanced-functions-reference.md
+        - Interview problems: python/advanced-functions/interview-problems.md
+        - Frequently asked questions: python/advanced-functions/frequently-asked-questions.md
+      - Iterators:
+        - Core concepts: python/iterators/core-concepts.md
+        - Iterator reference: python/iterators/iterator-reference.md
+        - Interview problems: python/iterators/interview-problems.md
+        - Frequently asked questions: python/iterators/frequently-asked-questions.md
+      - Modules:
+        - Core concepts: python/modules/core-concepts.md
+        - Module reference: python/modules/module-reference.md
+        - Interview problems: python/modules/interview-problems.md
+        - Frequently asked questions: python/modules/frequently-asked-questions.md
+      - Exception Handling:
+        - Core concepts: python/exception-handling/core-concepts.md
+        - Exception handling reference: python/exception-handling/exception-handling-reference.md
+        - Interview problems: python/exception-handling/interview-problems.md
+        - Frequently asked questions: python/exception-handling/frequently-asked-questions.md
+      - Error Types:
+        - Core concepts: python/errors/core-concepts.md
+        - Error types reference: python/errors/error-types-reference.md
+        - Interview problems: python/errors/interview-problems.md
+        - Frequently asked questions: python/errors/frequently-asked-questions.md
+    - Built-in Types:
+      - Strings:
+        - Core concepts: python/strings/core-concepts.md
+        - Methods: python/strings/methods.md
+        - Interview problems: python/strings/interview-problems.md
+        - Frequently asked questions: python/strings/frequently-asked-questions.md
+        - Practice tasks: python/strings/practice-tasks.md
+      - String Formatting:
+        - Core concepts: python/string-formatting/core-concepts.md
+        - String formatting reference: python/string-formatting/string-formatting-reference.md
+        - Interview problems: python/string-formatting/interview-problems.md
+        - Frequently asked questions: python/string-formatting/frequently-asked-questions.md
+      - Lists:
+        - Core concepts: python/list/core-concepts.md
+        - Methods: python/list/methods.md
+        - Interview problems: python/list/interview-problems.md
+        - Frequently asked questions: python/list/frequently-asked-questions.md
+        - Remove list items: python/list/remove-list-items.md
+      - Tuples:
+        - Core concepts: python/tuple/core-concepts.md
+        - Methods: python/tuple/methods.md
+        - Interview problems: python/tuple/interview-problems.md
+        - Frequently asked questions: python/tuple/frequently-asked-questions.md
+      - Dictionaries:
+        - Core concepts: python/dict/core-concepts.md
+        - Methods: python/dict/methods.md
+        - Interview problems: python/dict/interview-problems.md
+        - Frequently asked questions: python/dict/frequently-asked-questions.md
+      - Sets:
+        - Core concepts: python/set/core-concepts.md
+        - Methods: python/set/methods.md
+        - Interview problems: python/set/interview-problems.md
+        - Frequently asked questions: python/set/frequently-asked-questions.md
+      - Numbers:
+        - Core concepts: python/numbers/core-concepts.md
+        - Operations and methods: python/numbers/operations-and-methods.md
+        - Interview problems: python/numbers/interview-problems.md
+        - Frequently asked questions: python/numbers/frequently-asked-questions.md
+      - Range:
+        - Core concepts: python/range/core-concepts.md
+        - Range reference: python/range/range-reference.md
+        - Interview problems: python/range/interview-problems.md
+        - Frequently asked questions: python/range/frequently-asked-questions.md
+      - Booleans:
+        - Core concepts: python/bool/core-concepts.md
+        - Operations and truthiness: python/bool/operations-and-truthiness.md
+        - Interview problems: python/bool/interview-problems.md
+        - Frequently asked questions: python/bool/frequently-asked-questions.md
+      - NoneType:
+        - Core concepts: python/none-type/core-concepts.md
+        - Operations and patterns: python/none-type/operations-and-patterns.md
+        - Interview problems: python/none-type/interview-problems.md
+        - Frequently asked questions: python/none-type/frequently-asked-questions.md
+      - Binary Types:
+        - Core concepts: python/binary/core-concepts.md
+        - Operations and methods: python/binary/operations-and-methods.md
+        - Interview problems: python/binary/interview-problems.md
+        - Frequently asked questions: python/binary/frequently-asked-questions.md
+    - Data Structures:
+      - Recursion:
+        - Core concepts: python/data-structures/recursion/core-concepts.md
+        - Interview problems: python/data-structures/recursion/interview-problems.md
+        - Interview questions: python/data-structures/recursion/interview-questions.md
+      - Dynamic Programming:
+        - Core concepts: python/data-structures/dynamic-programming/core-concepts.md
+        - Interview problems: python/data-structures/dynamic-programming/interview-problems.md
+        - Interview questions: python/data-structures/dynamic-programming/interview-questions.md
+      - Searching Algorithms:
+        - Core concepts: python/data-structures/searching-algorithms/core-concepts.md
+        - Interview problems: python/data-structures/searching-algorithms/interview-problems.md
+        - Interview questions: python/data-structures/searching-algorithms/interview-questions.md
+      - Sorting Algorithms:
+        - Core concepts: python/data-structures/sorting-algorithms/core-concepts.md
+        - Interview problems: python/data-structures/sorting-algorithms/interview-problems.md
+        - Interview questions: python/data-structures/sorting-algorithms/interview-questions.md
+      - Stacks, Queues, and Linked Lists:
+        - Core concepts: python/data-structures/stacks-queues-linked-lists/core-concepts.md
+        - Interview problems: python/data-structures/stacks-queues-linked-lists/interview-problems.md
+        - Interview questions: python/data-structures/stacks-queues-linked-lists/interview-questions.md
+      - Hash Table:
+        - Core concepts: python/data-structures/hash-table/core-concepts.md
+        - Interview problems: python/data-structures/hash-table/interview-problems.md
+        - Interview questions: python/data-structures/hash-table/interview-questions.md
+      - Trees:
+        - Core concepts: python/data-structures/trees/core-concepts.md
+        - Interview problems: python/data-structures/trees/interview-problems.md
+        - Interview questions: python/data-structures/trees/interview-questions.md
+      - Heap and Priority Queue:
+        - Core concepts: python/data-structures/heap-priority-queue/core-concepts.md
+        - Interview problems: python/data-structures/heap-priority-queue/interview-problems.md
+        - Interview questions: python/data-structures/heap-priority-queue/interview-questions.md
+      - Graphs:
+        - Core concepts: python/data-structures/graphs/core-concepts.md
+        - Interview problems: python/data-structures/graphs/interview-problems.md
+        - Interview questions: python/data-structures/graphs/interview-questions.md
+      - Advanced Graph Algorithms:
+        - Core concepts: python/data-structures/advanced-graph-algorithms/core-concepts.md
+        - Interview problems: python/data-structures/advanced-graph-algorithms/interview-problems.md
+        - Interview questions: python/data-structures/advanced-graph-algorithms/interview-questions.md
+    - Object-Oriented Programming:
+      - OOP:
+        - Core concepts: python/oop/core-concepts.md
+        - OOP reference: python/oop/oop-reference.md
+        - Interview problems: python/oop/interview-problems.md
+        - Frequently asked questions: python/oop/frequently-asked-questions.md
+      - Classes and Objects:
+        - Core concepts: python/classes-and-objects/core-concepts.md
+        - Classes and objects reference: python/classes-and-objects/classes-and-objects-reference.md
+        - Interview problems: python/classes-and-objects/interview-problems.md
+        - Frequently asked questions: python/classes-and-objects/frequently-asked-questions.md
+      - Dunder Methods:
+        - Core concepts: python/dunder-methods/core-concepts.md
+        - Dunder methods reference: python/dunder-methods/dunder-methods-reference.md
+        - Interview problems: python/dunder-methods/interview-problems.md
+        - Frequently asked questions: python/dunder-methods/frequently-asked-questions.md
+      - Class Properties and self:
+        - Core concepts: python/class-properties-self/core-concepts.md
+        - Class properties and self reference: python/class-properties-self/class-properties-self-reference.md
+        - Interview problems: python/class-properties-self/interview-problems.md
+        - Frequently asked questions: python/class-properties-self/frequently-asked-questions.md
+      - Inheritance:
+        - Core concepts: python/inheritance/core-concepts.md
+        - Inheritance reference: python/inheritance/inheritance-reference.md
+        - Interview problems: python/inheritance/interview-problems.md
+        - Frequently asked questions: python/inheritance/frequently-asked-questions.md
+      - Encapsulation:
+        - Core concepts: python/encapsulation/core-concepts.md
+        - Encapsulation reference: python/encapsulation/encapsulation-reference.md
+        - Interview problems: python/encapsulation/interview-problems.md
+        - Frequently asked questions: python/encapsulation/frequently-asked-questions.md
+      - Data Abstraction:
+        - Core concepts: python/abstraction/core-concepts.md
+        - Data abstraction reference: python/abstraction/abstraction-reference.md
+        - Interview problems: python/abstraction/interview-problems.md
+        - Frequently asked questions: python/abstraction/frequently-asked-questions.md
+      - Polymorphism:
+        - Core concepts: python/polymorphism/core-concepts.md
+        - Polymorphism reference: python/polymorphism/polymorphism-reference.md
+        - Interview problems: python/polymorphism/interview-problems.md
+        - Frequently asked questions: python/polymorphism/frequently-asked-questions.md
+      - Class Relationships:
+        - Core concepts: python/class-relationships/core-concepts.md
+        - Class relationships reference: python/class-relationships/class-relationships-reference.md
+        - Interview problems: python/class-relationships/interview-problems.md
+        - Frequently asked questions: python/class-relationships/frequently-asked-questions.md
+      - Advanced OOP:
+        - Core concepts: python/advanced-oop/core-concepts.md
+        - Advanced OOP reference: python/advanced-oop/advanced-oop-reference.md
+        - Interview problems: python/advanced-oop/interview-problems.md
+        - Frequently asked questions: python/advanced-oop/frequently-asked-questions.md
+      - Python-Specific OOP:
+        - Core concepts: python/python-specific-oop/core-concepts.md
+        - Python-specific OOP reference: python/python-specific-oop/python-specific-oop-reference.md
+        - Interview problems: python/python-specific-oop/interview-problems.md
+        - Frequently asked questions: python/python-specific-oop/frequently-asked-questions.md
+      - Design Principles:
+        - Core concepts: python/design-principles/core-concepts.md
+        - Design principles reference: python/design-principles/design-principles-reference.md
+        - Interview problems: python/design-principles/interview-problems.md
+        - Frequently asked questions: python/design-principles/frequently-asked-questions.md
+      - Design Patterns:
+        - Core concepts: python/design-patterns/core-concepts.md
+        - Design patterns reference: python/design-patterns/design-patterns-reference.md
+        - Interview problems: python/design-patterns/interview-problems.md
+        - Frequently asked questions: python/design-patterns/frequently-asked-questions.md
+    - Advanced Python:
+      - Internals:
+        - Core concepts: python/advanced-python/core-concepts.md
+        - Advanced Python reference: python/advanced-python/advanced-python-reference.md
+        - Interview problems: python/advanced-python/interview-problems.md
+        - Frequently asked questions: python/advanced-python/frequently-asked-questions.md
+      - Concurrency:
+        - Core concepts: python/concurrency/core-concepts.md
+        - Concurrency reference: python/concurrency/concurrency-reference.md
+        - Interview problems: python/concurrency/interview-problems.md
+        - Frequently asked questions: python/concurrency/frequently-asked-questions.md
+    - Standard Library:
+      - Dates:
+        - Core concepts: python/dates/core-concepts.md
+        - Date reference: python/dates/date-reference.md
+        - Interview problems: python/dates/interview-problems.md
+        - Frequently asked questions: python/dates/frequently-asked-questions.md
+      - Maths:
+        - Core concepts: python/maths/core-concepts.md
+        - Maths reference: python/maths/maths-reference.md
+        - Interview problems: python/maths/interview-problems.md
+        - Frequently asked questions: python/maths/frequently-asked-questions.md
+      - JSON:
+        - Core concepts: python/json/core-concepts.md
+        - JSON reference: python/json/json-reference.md
+        - Interview problems: python/json/interview-problems.md
+        - Frequently asked questions: python/json/frequently-asked-questions.md
+      - RegEx:
+        - Core concepts: python/regex/core-concepts.md
+        - RegEx reference: python/regex/regex-reference.md
+        - Interview problems: python/regex/interview-problems.md
+        - Frequently asked questions: python/regex/frequently-asked-questions.md
+      - File Handling:
+        - Core concepts: python/file-handling/core-concepts.md
+        - File handling reference: python/file-handling/file-handling-reference.md
+        - Interview problems: python/file-handling/interview-problems.md
+        - Frequently asked questions: python/file-handling/frequently-asked-questions.md
+    - Web and API:
+      - REST API Design:
+        - Core concepts: python/rest-api-design/core-concepts.md
+        - REST API design reference: python/rest-api-design/rest-api-design-reference.md
+        - Interview problems: python/rest-api-design/interview-problems.md
+        - Frequently asked questions: python/rest-api-design/frequently-asked-questions.md
+    - Database:
+      - MySQL CRUD:
+        - Core concepts: python/database-mysql/core-concepts.md
+        - MySQL CRUD reference: python/database-mysql/mysql-crud-reference.md
+        - Interview problems: python/database-mysql/interview-problems.md
+        - Frequently asked questions: python/database-mysql/frequently-asked-questions.md
+    - Tooling and Environment:
+      - pip:
+        - Core concepts: python/pip/core-concepts.md
+        - pip reference: python/pip/pip-reference.md
+        - Interview problems: python/pip/interview-problems.md
+        - Frequently asked questions: python/pip/frequently-asked-questions.md
+      - Virtual Environments:
+        - Core concepts: python/virtual-environment/core-concepts.md
+        - Virtual environment reference: python/virtual-environment/virtual-environment-reference.md
+        - Interview problems: python/virtual-environment/interview-problems.md
+        - Frequently asked questions: python/virtual-environment/frequently-asked-questions.md
+    - Interview Q&A: python/interview-questions.md

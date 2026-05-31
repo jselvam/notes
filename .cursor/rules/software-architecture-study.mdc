@@ -1,0 +1,134 @@
+---
+description: Software architecture & system design study for senior developer job prep; docs under docs/architecture/
+globs: docs/architecture/**/*.md,mkdocs.yml
+alwaysApply: false
+---
+
+# Software architecture & job-level study
+
+Use when the user asks to learn, document, or practice **software architecture**, **system design**, **design patterns**, or **senior / staff / architect** interview topics.
+
+Target level: working developer moving toward **Senior → Staff → Architect** — practical trade-offs, not textbook-only theory.
+
+## Folder layout (`docs/architecture/`)
+
+Create categories from the user’s prompt. Prefer focused folders over one long page.
+
+| Category | Folder | Examples |
+|----------|--------|----------|
+| Fundamentals | `fundamentals/` | SOLID, coupling, cohesion, non-functional requirements |
+| System design | `system-design/` | URL shortener, chat, feed, rate limiter, notification |
+| Design patterns | `design-patterns/` | singleton, factory, observer, strategy, repository |
+| Distributed systems | `distributed-systems/` | CAP, consensus, idempotency, eventual consistency |
+| Scalability & reliability | `scalability/` | load balancing, caching, CDN, sharding, replication |
+| Data & storage | `databases/` | SQL vs NoSQL, indexing, partitioning, read/write paths |
+| Messaging & events | `messaging/` | queues, pub/sub, Kafka, event sourcing, CQRS |
+| API & integration | `api-design/` | REST, GraphQL, gRPC, versioning, webhooks |
+| Security | `security/` | authn/authz, OAuth, JWT, zero trust, secrets |
+| Cloud & deployment | `cloud/` | containers, K8s basics, CI/CD, blue-green, observability |
+| Interview prep | `interview/` | behavioral framing, estimation, trade-off questions |
+| Case studies | `case-studies/` | real-world breakdowns tied to user’s experience |
+
+**Filenames:** lowercase with hyphens (e.g. `url-shortener.md`, `caching-strategies.md`).
+
+## Page templates
+
+### Concept page
+
+Sections: **Overview** → **Why it matters** → **Key ideas** → **Trade-offs** → **When to use / avoid** → **See also**.
+
+Keep answers **interview-length** first (2–4 sentences), then expand with detail and diagrams.
+
+### System design page
+
+Use this structure for each design problem:
+
+1. **Requirements** — functional + non-functional (scale, latency, availability, consistency).
+2. **Back-of-envelope** — rough QPS, storage, bandwidth (show assumptions).
+3. **High-level design** — clients, APIs, core services, data stores (mermaid or ASCII diagram).
+4. **Deep dive** — 1–2 critical components (e.g. hashing for sharding, cache invalidation).
+5. **Bottlenecks & failure modes** — single points of failure, hot keys, thundering herd.
+6. **Trade-offs** — what you chose and what you deferred.
+7. **Extensions** — follow-ups interviewers often ask.
+
+### Design pattern page
+
+1. **Intent** — problem the pattern solves.
+2. **Structure** — participants (class/module roles).
+3. **Example** — minimal pseudocode or language the user prefers (often Java/TypeScript/Python).
+4. **Pros / cons** — including over-engineering risk.
+5. **Real usage** — framework or codebase where it appears.
+
+### Interview Q&A page
+
+Format: **Question** → **Short answer (30–60 sec)** → **Longer explanation** → **Follow-up probes**.
+
+## Diagrams
+
+- Use **mermaid** for flows, sequences, and component diagrams when the design has more than three moving parts.
+- Label data direction (read vs write) and sync vs async paths explicitly.
+
+## Job-level expectations
+
+| Level | Emphasis |
+|-------|----------|
+| **Senior** | Own a service end-to-end; patterns, testing, observability, pragmatic scaling |
+| **Staff** | Cross-team design, platform choices, migration paths, cost vs complexity |
+| **Architect** | Domain boundaries, long-term evolution, org alignment, build vs buy |
+
+When the user’s target level is unclear, default to **Senior** depth and note what Staff/Architect would add.
+
+## Default topic set (when user does not specify)
+
+- Monolith vs microservices vs modular monolith
+- REST API design, idempotency, pagination, rate limiting
+- Caching (CDN, application, database); cache-aside vs write-through
+- SQL scaling: indexing, read replicas, sharding basics
+- Message queues vs event streams; at-least-once vs exactly-once (practical view)
+- Classic designs: URL shortener, news feed, chat, file storage, search autocomplete
+- SOLID, dependency injection, hexagonal / clean architecture (brief, applied)
+- Observability: logs, metrics, traces; SLI/SLO basics
+
+## MkDocs navigation
+
+After adding pages:
+
+1. Add a top-level **`Architecture:`** section in `mkdocs.yml` (or extend it if present).
+2. Nest by category (mirror **Python** → **Programs** style).
+
+Example:
+
+```yaml
+  - Architecture:
+    - Fundamentals:
+      - SOLID: architecture/fundamentals/solid.md
+    - System design:
+      - URL shortener: architecture/system-design/url-shortener.md
+    - Design patterns:
+      - Strategy: architecture/design-patterns/strategy.md
+```
+
+Every sidebar page needs a `nav` entry unless the user wants a link-only page.
+
+## Workflow (always run)
+
+From the directory containing `mkdocs.yml`:
+
+```bash
+mkdocs build --strict
+```
+
+Fix broken links and missing nav targets. Use `mkdocs serve` for live preview.
+
+## Cross-links
+
+- Link system-design pages to related fundamentals (e.g. caching design → `caching-strategies.md`).
+- Link to existing site topics when relevant (`docs/dsa/`, `docs/python/`, `docs/HTML/security.md`).
+- Prefer relative paths; avoid duplicating full explanations across pages.
+
+## Tone & quality
+
+- Lead with **trade-offs**, not buzzwords.
+- Name **concrete** technologies only when they illustrate a decision (Redis, Kafka, Postgres, etc.).
+- Call out **anti-patterns** and “resume-driven architecture” pitfalls.
+- Ask before creating a new top-level category if an existing folder fits.

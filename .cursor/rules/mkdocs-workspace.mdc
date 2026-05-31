@@ -1,0 +1,29 @@
+---
+description: MkDocs workspace root, commands, and build output for python notes site
+alwaysApply: true
+---
+
+# Python MkDocs workspace
+
+This folder is a self-contained MkDocs site. Treat `mkdocs.yml` as the source of truth for `site_name` and sidebar `nav`.
+
+## Layout
+
+- **Config**: `mkdocs.yml` (in this directory).
+- **Sources**: `docs/**/*.md` (and static assets next to them as needed).
+- **Build output**: `site/` is generated. Do not hand-edit files under `site/`.
+
+## Commands
+
+Run from this directory (the one containing `mkdocs.yml`):
+
+- `mkdocs serve` — local preview with live reload.
+- `mkdocs build` — static site into `site/`.
+
+## Navigation
+
+When you add, rename, or move a page under `docs/`, update the `nav` entry in `mkdocs.yml` if the page should appear in the sidebar. Mirror URL shape with folders.
+
+## Links
+
+Prefer relative links between docs: `[label](path/to/page.md)` or directory-style `[label](path/to/page/)`. Link to other notes in this site instead of duplicating content.
