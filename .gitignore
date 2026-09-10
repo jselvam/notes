@@ -1,2 +1,4 @@
 .DS_Store
 /site/
+site.zip
+scripts/__pycache__/build_book_html.cpython-314.pyc
