@@ -35,7 +35,7 @@ Create or extend **categories** from the user’s prompt. Prefer topic folders o
 | Interview Q&A / FAQ | root, datatype folder, or `interview/` | conceptual answers, tricky Python, `frequently-asked-questions.md` |
 | Programs / problems | `programs/` | reverse string, palindrome, second max |
 | LeetCode-style | `leetcode/` or `programs/` | two sum, valid parentheses, merge lists |
-| Data structures | `data-structures/` | recursion, dynamic programming, searching algorithms, sorting algorithms, stacks, queues, linked lists, hash table, binary trees, BSTs, AVL trees, heap, priority queue, graphs, advanced graph algorithms |
+| Data structures | `data-structures/` | recursion, dynamic programming, searching algorithms, sorting algorithms, sliding window, stacks, queues, linked lists, hash table, binary trees, BSTs, AVL trees, heap, priority queue, graphs, advanced graph algorithms |
 
 **Filenames:** lowercase with hyphens (e.g. `second-max.md`, `string-reverse.md`).
 
@@ -314,6 +314,9 @@ Example:
         - Core concepts: python/data-structures/sorting-algorithms/core-concepts.md
         - Interview problems: python/data-structures/sorting-algorithms/interview-problems.md
         - Interview questions: python/data-structures/sorting-algorithms/interview-questions.md
+      - Sliding Window:
+        - Maximum sum subarray of size k: python/data-structures/sliding-window/maximum-sum-subarray-size-k.md
+        - Minimum size subarray sum: python/data-structures/sliding-window/minimum-size-subarray-sum.md
       - Stacks, Queues, and Linked Lists:
         - Core concepts: python/data-structures/stacks-queues-linked-lists/core-concepts.md
         - Interview problems: python/data-structures/stacks-queues-linked-lists/interview-problems.md

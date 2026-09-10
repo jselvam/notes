@@ -36,6 +36,7 @@ This repository contains a MkDocs study site for Python concepts, interview prep
 - Dynamic programming
 - Searching algorithms, including linear and binary search patterns
 - Sorting algorithms and sorting trade-offs
+- Sliding window problems for fixed-size and moving-window arrays
 - Stacks, queues, and linked lists
 - Hash tables
 - Trees and tree traversal
@@ -122,6 +123,22 @@ For a stricter validation build:
 ```bash
 mkdocs build --strict
 ```
+
+## Exporting as a Printable Book
+
+Generate one HTML file from the order in `mkdocs.yml`:
+
+```bash
+python scripts/build_book_html.py
+```
+
+Generate only the Python notes:
+
+```bash
+python scripts/build_book_html.py --section Python --output site/python-book.html
+```
+
+Open the generated HTML file in a browser and use the browser print dialog to save it as a PDF.
 
 ## Study Flow
 

@@ -124,6 +124,9 @@ nav:
         - Core concepts: python/data-structures/sorting-algorithms/core-concepts.md
         - Interview problems: python/data-structures/sorting-algorithms/interview-problems.md
         - Interview questions: python/data-structures/sorting-algorithms/interview-questions.md
+      - Sliding Window:
+        - Maximum sum subarray of size k: python/data-structures/sliding-window/maximum-sum-subarray-size-k.md
+        - Minimum size subarray sum: python/data-structures/sliding-window/minimum-size-subarray-sum.md
       - Stacks, Queues, and Linked Lists:
         - Core concepts: python/data-structures/stacks-queues-linked-lists/core-concepts.md
         - Interview problems: python/data-structures/stacks-queues-linked-lists/interview-problems.md
